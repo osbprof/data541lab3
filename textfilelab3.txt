@@ -1,0 +1,70 @@
+PART 2
+
+Question 1
+-----
+Clone your Lab 3 repository to your local machine (1 mark)
+  1. navigaed to github, logged in, and created new reposity called "data541lab3"
+  2. clicked the green "code" button and copied the URL
+  3. opened gitbash terminal, navigated to my data541 directory: "git clone <paste URL>"
+  4. double-checked that the new folder exists (success!)
+    
+Navigate into the cloned repository folder
+  1. in gitbash, "cd data541lab3" (ls to check that the folder was empty)
+
+Create a new Git branch called Markdown (1 mark)
+  1. in gitbash, "git branch Markdown"
+
+Use checkout to move to the Markdown branch.(1 mark)
+Check the status of the current repository and confirm you are on the Markdown branch (1 mark)
+  1. in gitbash, "git checkout Markdown" 
+     (response received "Switch to branch 'Markdown')
+     ("Markdown" showing in blue font in directory path)
+
+Add and commit your lab3_q1.md and lab3_q2.md files to the current branch. (1 mark)
+  1. in gitbash, "cp /c/Users/300191693/documents/mds/data541/lab3/lab3_q1.md /c/Users/300191693/documents/mds/data541/data541lab3"
+  2. in gitbash, "cp /c/Users/300191693/documents/mds/data541/lab3/lab3_q2.md /c/Users/300191693/documents/mds/data541/data541lab3"
+  3. in gitbash, "git add -A"
+  4. in gitbash, "git commit -m "lab3_q1.md and lab3_q2.md files added"
+
+Use the push command with the following flags -u origin Markdown to push the Markdown branch to GitHub. (1 mark)
+  1. in gitbash, "git push -u origin Markdown"
+
+On GitHub, you should see the Markdown branch in the Branch dropdown:
+  1. Confirmed! "main" & "Markdown" branches exist, with the files residing in the Markdown branch.
+-----
+
+Question 2
+-----
+Use checkout to move back to the master branch of your Git repository. (1 mark)
+  1. in gitbash, "git checkout main" (main now showing in blue font in directory path)
+
+Merge your Markdown branch into your master branch. The syntax for the merge command is git merge branchName. (1 mark)
+  1. in gitbash, "git merge Markdown"
+  Result...
+	Updating d5ca232..59f8745
+	Fast-forward
+	 lab3_q1.md | 35 +++++++++++++++++++++++++++++++++++
+	 lab3_q2.md | 28 ++++++++++++++++++++++++++++
+	 2 files changed, 63 insertions(+)
+	 create mode 100644 lab3_q1.md
+	 create mode 100644 lab3_q2.md
+
+Perform a push to push the merge up to GitHub.
+  1. in gitbash, "git push"
+  Result...
+	Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+	To https://github.com/osbprof/data541lab3.git
+	   d5ca232..59f8745  main -> main
+
+Delete your Markdown branch - now that it is merged, it is no longer necessary.(1 mark)  
+  1. went to GitHub directory (main page).
+  2. Clicked "2 branches" link.
+  3. deleted the Markdown branch (garbage can icon).
+
+Use the git log function to print a short log of your actions. If the -oneline flag doesn't work, try using --pretty=oneline instead.
+Take a screenshot of the output. (1 mark)
+
+Add and commit your text files with your commands and/or screenshot(s) to the master branch of your lab repo and push.
+Your lab repo master branch should now contain your Markdown files from Part 1 of this lab, plus your text files and screenshots from Part 2.
+
+Submit the link to your repo on Canvas.
